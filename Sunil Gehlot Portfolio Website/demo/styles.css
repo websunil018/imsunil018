@@ -1,0 +1,253 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.light-mode {
+    background-color: #f4f4f4;
+    color: #333333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header */
+  header {
+    padding: 20px 10%;
+    background-color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Roboto Mono', monospace;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #ff6b6b;
+  }
+  
+  .theme-toggle {
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #ff6b6b, #3a1c71);
+  }
+  
+  .hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .highlight {
+    color: #ff6b6b;
+  }
+  
+  .hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #ff4757;
+  }
+  
+  .scroll-down {
+    position: absolute;
+    bottom: 20px;
+    font-size: 24px;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* About Section */
+  .about {
+    padding: 80px 10%;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Projects Section */
+  .projects {
+    padding: 80px 10%;
+    text-align: center;
+  }
+  
+  .projects h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .project-card {
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .project-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .project-link {
+    color: #ff6b6b;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .project-link:hover {
+    color: #ff4757;
+  }
+  
+  /* Contact Section */
+  .contact {
+    padding: 80px 10%;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact input,
+  .contact textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .contact textarea {
+    resize: vertical;
+    height: 150px;
+  }
+  
+  /* Footer */
+  footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #333333;
+    margin-top: 40px;
+  }
+  
+  .social-links {
+    margin-top: 10px;
+  }
+  
+  .social-links a {
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+  }
+  
+  .social-links a:hover {
+    color: #ff6b6b;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .hero-content,
+  .about,
+  .projects,
+  .contact {
+    animation: fadeIn 1s ease-in-out;
+  }
